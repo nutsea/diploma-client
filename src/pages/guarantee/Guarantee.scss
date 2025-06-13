@@ -1,0 +1,322 @@
+.GuaranteeInfo {
+    margin-top: 42px;
+
+    h2 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #020202;
+        margin: 0 0 16px 0;
+    }
+
+    h4 {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0 0 12px 0;
+        color: #121212;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 160%;
+        color: #121212;
+        margin: 0 0 12px 0;
+    }
+
+    .GListItem {
+        color: #121212BF;
+    }
+}
+
+.GuaranteeTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.GuaranteeTopLeft {
+    width: 55%;
+}
+
+.GuaranteeTopRight {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.GuaranteeMid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.GuaranteeMidLeft {
+    width: 65%;
+}
+
+.GuaranteeMidRight {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 100%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.GuaranteeBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.GuaranteeBottomLeft {
+    width: 30%;
+
+    video {
+        width: 100%;
+    }
+}
+
+.GuaranteeBottomRight {
+    // margin-left: 20px;
+    width: calc(67%);
+    // width: 300px;
+}
+
+.GradientText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 16px;
+
+    p {
+        max-width: 551px;
+        margin-bottom: 0;
+    }
+}
+
+.GradientText2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 16px;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    a {
+        color: #0051ff;
+        text-decoration: none;
+    }
+}
+
+.GradientVerticalLine,
+.GradientVerticalLine2 {
+    width: 4px;
+    min-width: 4px;
+    height: 52px;
+    margin-right: 16px;
+    border-radius: 7px;
+    background-image: linear-gradient(to bottom, #65AEFE 0%, #A081ED 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.GuaranteeMarkedPar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.GMPPoint {
+    margin-right: 6px;
+}
+
+.GMPText {
+    margin-top: 1px;
+}
+
+.GuaranteeImg {
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.GuaranteeImg2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+        height: auto;
+        max-width: 397px;
+    }
+}
+
+.IsMobile {
+    display: none;
+}
+
+.NotMobile {
+    display: block;
+}
+
+@media (max-width: 1050px) {
+    .GuaranteeTop {
+        flex-direction: column;
+    }
+
+    .GuaranteeTopLeft {
+        width: 100%;
+    }
+
+    .GuaranteeTopRight {
+        width: 100%;
+
+        img {
+            max-width: 400px;
+        }
+    }
+
+    .GuaranteeMid {
+        flex-direction: column;
+    }
+
+    .GuaranteeMidLeft {
+        width: 100%;
+    }
+
+    .GuaranteeMidRight {
+        width: 100%;
+    }
+
+    .Mobile42 {
+        margin-bottom: 42px;
+    }
+
+    .Mobile10 {
+        padding-top: 10px;
+    }
+
+    .GuaranteeBottomLeft {
+        width: 50%;
+    }
+
+    .GuaranteeBottomRight {
+        width: calc(50% - 20px);
+    }
+
+    .GradientVerticalLine2 {
+        height: 77px;
+    }
+}
+
+@media (max-width: 937px) {
+    .GradientVerticalLine2 {
+        height: 100px;
+    }
+}
+
+@media (max-width: 850px) {
+    .GuaranteeInfo {
+        margin-top: 26px;
+
+        h2 {
+            font-size: 20px;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    .GradientVerticalLine,
+    .GradientVerticalLine2 {
+        width: 2px;
+        min-width: 2px;
+        margin-right: 8px;
+    }
+
+    .GradientVerticalLine2 {
+        height: 77px;
+    }
+
+    .Mobile42 {
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 565px) {
+    .GradientVerticalLine2 {
+        height: 100px;
+    }
+
+    .GuaranteeBottom {
+        flex-direction: column;
+    }
+
+    .IsMobile {
+        display: block;
+    }
+
+    .NotMobile {
+        display: none;
+    }
+
+    .Mobile10 {
+        padding-top: 0;
+    }
+
+    .GuaranteeBottomLeft {
+        width: 100%;
+    }
+
+    .GuaranteeBottomRight {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .GradientVerticalLine2 {
+        height: 57px;
+    }
+}
+
+@media (max-width: 462px) {
+    .GradientVerticalLine {
+        height: 57px;
+    }
+}
+
+@media (max-width: 450px) {
+    .GuaranteeImg2 {
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 345px) {
+    .GradientVerticalLine {
+        height: 77px;
+    }
+}

@@ -1,0 +1,447 @@
+.Header {
+    width: 80%;
+    max-width: 1360px;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    color: #020202;
+    border-bottom: solid 1px #f1f1f1;
+}
+
+.HeaderPC {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.HeaderMobile {
+    display: none;
+}
+
+.HeaderTop {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.HeaderLogo {
+    width: 104px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.HeaderNav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 4px;
+
+    span {
+        cursor: pointer;
+        transition: color .1s linear;
+
+        @media (hover: hover) {
+            &:hover {
+                color: #02020280;
+            }
+        }
+
+        @media (pointer: coarse) {
+            &:active {
+                color: #02020280;
+            }
+        }
+    }
+
+    span+span {
+        margin-left: 24px;
+    }
+}
+
+.HeaderSearch {
+    height: 40px;
+    width: 440px;
+    border: solid 1.5px #0202021a;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: border .1s linear;
+    position: relative;
+    z-index: 6;
+    transition: box-shadow .2s ease;
+
+    &.Focused {
+        box-shadow: 0px 0px 0px 9999px #16161633;
+    }
+
+    img {
+        margin: 0 13px;
+        height: 14px;
+    }
+
+    form {
+        width: calc(100% - 14px - 13px - 13px);
+    }
+
+    input {
+        border: none;
+        outline: none;
+        font-family: 'Manrope', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        // width: calc(100% - 14px - 13px - 13px);
+        padding: 0;
+        width: 100%;
+        color: #020202;
+        z-index: 3;
+
+        &::placeholder {
+            color: #02020240;
+        }
+    }
+}
+
+.HeaderSearchMenu {
+    top: 46px;
+    position: absolute;
+    width: calc(100% + 3px);
+    left: -1.5px;
+    padding: 12px 0 12px 0;
+    background-color: white;
+    border-radius: 8px;
+    transition: opacity .2s ease;
+    z-index: 3;
+
+    &.Invisible {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.HeaderSearchHead {
+    margin-bottom: 12px;
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #020202;
+    padding: 0 16px;
+}
+
+.HeaderSearchItem {
+    font-size: 14px;
+    font-weight: 500;
+    color: #484848;
+    padding: 4px 16px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #F6F6F6;
+    }
+}
+
+.HeaderSearchItem + .HeaderSearchHead {
+    margin-top: 16px;
+    margin-bottom: 6px;
+}
+
+.WordBreak {
+    word-wrap: break-word;
+    font-weight: 700;
+
+    span {
+        color: #12121280;
+        font-weight: 500;
+    }
+}
+
+.LightAutocomplete {
+    opacity: 0.6;
+}
+
+.HeaderSearchBlock {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+
+    &.Invisible {
+        display: none;
+    }
+}
+
+.HeaderBtns {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2px;
+
+    img {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.FavHeaderBox,
+.CartHeaderBox {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+
+    span {
+        position: absolute;
+        left: 12px;
+        top: -3px;
+        padding: 0 6px;
+        height: 16px;
+        background-image: linear-gradient(to bottom left, #65AEFE 0%, #A081ED 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border-radius: 16px;
+        font-size: 10px;
+        font-weight: 700;
+    }
+}
+
+.CartHeaderBox {
+    margin-left: 18px;
+}
+
+.HeaderAuth {
+    padding: 0 13px;
+    height: 40px;
+    border: solid 1.5px #0202021a;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    transition: border .1s linear;
+
+    span {
+        font-size: 14px;
+        font-weight: 600;
+        margin-right: 6px;
+    }
+
+    img {
+        height: 14px;
+        width: 14px;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            border: solid 1.5px #020202;
+        }
+    }
+
+    @media (pointer: coarse) {
+        &:active {
+            border: solid 1.5px #020202;
+        }
+    }
+}
+
+.HProfileInitials {
+    background-color: #F5F5F5;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 700;
+    color: #767676;
+    cursor: pointer;
+    user-select: none;
+}
+
+.GradientProfile {
+    background-image: linear-gradient(to bottom left, #65AEFE 0%, #8181ed 130%);
+
+    img {
+        width: 26px;
+    }
+}
+
+.HeaderBottom {
+    width: 100%;
+    height: 50px;
+}
+
+.HeaderNav2 {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    span {
+        font-size: 14px;
+        font-weight: 600;
+        color: #02020280;
+        padding: 0 36.4px;
+        cursor: pointer;
+        transition: color .1s linear;
+
+        @media (hover: hover) {
+            &:hover {
+                color: #020202;
+            }
+        }
+
+        @media (pointer: coarse) {
+            &:active {
+                color: #020202;
+            }
+        }
+    }
+}
+
+.BurgerBtn {
+    width: 96px;
+    cursor: pointer;
+}
+
+@media (max-width: 1480px) {
+    .HeaderPC {
+        display: none;
+    }
+
+    .HeaderMobile {
+        height: 56px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .HeaderLogo {
+        width: auto;
+        height: 18px;
+        margin-bottom: 3px;
+    }
+
+    .FavHeaderBox {
+        margin-left: 18px;
+    }
+
+    .HeaderSearchCertain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        max-height: 100svh;
+        overflow: scroll;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: white;
+        z-index: 3;
+        transform: translateY(-1000px);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &.Visible {
+            box-shadow: 0px 0px 0px 9999px #16161633;
+            transform: translateY(0);
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+            width: 0;
+        }
+    }
+
+    .HeaderSearchCertainBG {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        transform: translateY(-1000px);
+
+        &.Visible {
+            transform: translateY(0);
+        }
+    }
+
+    .HeaderSearch {
+        width: 100%;
+        height: 36px;
+    }
+
+    .HeaderSearchRow {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin: 27px 0;
+        max-width: 1360px;
+    }
+
+    .HeaderSearchClose {
+        width: 16px;
+        margin-left: 15px;
+    }
+
+    .HeaderSearchMenu {
+        width: 100%;
+        position: static;
+        background-color: unset;
+        padding: 0 0 26px 0;
+    }
+
+    .HeaderSearchHead {
+        padding: 0 10vw;
+    }
+
+    .HeaderSearchItem {
+        padding: 4px 10vw;
+    }
+}
+
+@media (max-width: 850px) {
+    .Header {
+        width: 88%;
+        padding: 0 6%;
+    }
+
+    .HeaderSearchRow {
+        width: 88%;
+    }
+
+    .HeaderSearchHead {
+        padding: 0 6vw;
+    }
+
+    .HeaderSearchItem {
+        padding: 4px 6vw;
+    }
+
+    .HeaderSearch input {
+        font-size: 12px;
+    }
+
+    .HeaderSearchItem {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .BurgerBtn {
+        width: fit-content;
+    }
+
+    .HeaderLogo {
+        margin-right: calc(50% - 96px - 54px);
+    }
+}
