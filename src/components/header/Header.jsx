@@ -99,11 +99,7 @@ export const Header = observer(({ authcode, token }) => {
     const handleAuth = async () => {
         await createAuth().then(data => {
             let telegramUrl
-            if (window.location.hostname === 'localhost') {
-                telegramUrl = process.env.REACT_APP_LOCAL_BOT_URL + data.code
-            } else {
-                telegramUrl = process.env.REACT_APP_BOT_URL + data.code
-            }
+            telegramUrl = process.env.REACT_APP_BOT_URL + data.code
 
             setTimeout(() => {
                 let newWindow = window.open(telegramUrl, '_blank')
@@ -325,7 +321,6 @@ export const Header = observer(({ authcode, token }) => {
                         <div className='HeaderNav'>
                             <span id="/payment" onClick={handleNavigate}>Оплата и доставка</span>
                             <span id="/guarantee" onClick={handleNavigate}>Гарантия оригинальности</span>
-                            <span id="/contacts" onClick={handleNavigate}>Контакты</span>
                         </div>
                         <div
                             className={`HeaderSearch ${isFocus ? 'Focused' : ''}`}
@@ -430,9 +425,6 @@ export const Header = observer(({ authcode, token }) => {
                         <div className='HeaderNav2'>
                             <span id={process.env.REACT_APP_SHOES_PATH} onClick={handleNavigate}>Обувь</span>
                             <span id={process.env.REACT_APP_CLOTHES_PATH} onClick={handleNavigate}>Одежда</span>
-                            <span id={process.env.REACT_APP_ACCESSORIES_PATH} onClick={handleNavigate}>Аксессуары</span>
-                            <span id={process.env.REACT_APP_COSMETICS_PATH} onClick={handleNavigate}>Косметика</span>
-                            <span id={process.env.REACT_APP_PERFUMERY_PATH} onClick={handleNavigate}>Парфюмерия</span>
                         </div>
                     </div>
                 </div>
@@ -537,21 +529,6 @@ export const Header = observer(({ authcode, token }) => {
                             <img src={arr} alt="Стрелка" id={process.env.REACT_APP_CLOTHES_PATH} />
                         </div>
                         <div className="MenuLine" />
-                        <div className="MenuItem" id={process.env.REACT_APP_ACCESSORIES_PATH} onClick={handleNavigate}>
-                            <span id={process.env.REACT_APP_ACCESSORIES_PATH}>Аксессуары</span>
-                            <img src={arr} alt="Стрелка" id={process.env.REACT_APP_ACCESSORIES_PATH} />
-                        </div>
-                        <div className="MenuLine" />
-                        <div className="MenuItem" id={process.env.REACT_APP_COSMETICS_PATH} onClick={handleNavigate}>
-                            <span id={process.env.REACT_APP_COSMETICS_PATH}>Косметика</span>
-                            <img src={arr} alt="Стрелка" id={process.env.REACT_APP_COSMETICS_PATH} />
-                        </div>
-                        <div className="MenuLine" />
-                        <div className="MenuItem" id={process.env.REACT_APP_PERFUMERY_PATH} onClick={handleNavigate}>
-                            <span id={process.env.REACT_APP_PERFUMERY_PATH}>Парфюмерия</span>
-                            <img src={arr} alt="Стрелка" id={process.env.REACT_APP_PERFUMERY_PATH} />
-                        </div>
-                        <div className="MenuLine" />
                     </div>
                     <div className="MenuCatalogue">
                         <div className="MenuItem2" id="/payment" onClick={handleNavigate}>
@@ -560,10 +537,6 @@ export const Header = observer(({ authcode, token }) => {
                         <div className="MenuLine" />
                         <div className="MenuItem2" id="/guarantee" onClick={handleNavigate}>
                             <span id="/guarantee">Гарантия оригинальности</span>
-                        </div>
-                        <div className="MenuLine" />
-                        <div className="MenuItem2" id="/contacts" onClick={handleNavigate}>
-                            <span id="/contacts">Контакты</span>
                         </div>
                         <div className="MenuLine" />
                     </div>

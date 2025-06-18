@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import './Thanks.scss'
 
 import star from '../../assets/star.svg'
-import vk from '../../assets/vk.svg'
 import tg from '../../assets/tg.svg'
 
 export const Thanks = () => {
@@ -20,12 +19,9 @@ export const Thanks = () => {
         <div className="OopsBox">
             <div className="OopsContainer">
                 <div className="OopsSub">Номер вашего заказа уже отправлен в Telegram</div>
-                <p className="OopsPar">Пожалуйста, свяжитесь с нами удобным для вас способом для уточнения деталей заказа</p>
+                <p className="OopsPar">Пожалуйста, свяжитесь с нами для уточнения деталей заказа</p>
                 <div className="OopsSM">
-                    <a href="https://vk.com/im?sel=-218074236&entrypoint=community_page" target="_blank" rel="noreferrer">
-                        <img src={vk} alt="Вконтакте" />
-                    </a>
-                    <a href="https://t.me/kicksie_manager" target="_blank" rel="noreferrer">
+                    <a href="https://t.me/nutsea" target="_blank" rel="noreferrer">
                         <img src={tg} alt="Telegram" />
                     </a>
                 </div>

@@ -68,7 +68,6 @@
     flex-direction: row;
     height: 213.33px;
     overflow: hidden;
-    // cursor: pointer;
 }
 
 .CartRemove {
@@ -193,7 +192,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    // color: #020202;
 }
 
 .CartItemDrop {
@@ -211,7 +209,6 @@
 }
 
 .CartOrder {
-    // width: calc(25.4% - 36px);
     width: 310px;
     height: fit-content;
     border: solid 1px #EAEAEA;

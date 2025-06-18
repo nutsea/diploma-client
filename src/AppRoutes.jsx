@@ -12,11 +12,7 @@ import { Cart } from "./pages/cart/Cart";
 import { Order } from "./pages/order/Order";
 import { Fav } from "./pages/fav/Fav";
 import { Oops } from "./pages/oops/Oops";
-import { Contacts } from "./pages/contacts/Contacts";
 import { Thanks } from "./pages/thanks/Thanks";
-import { Policy } from "./pages/policy/Policy";
-import { Agreement } from "./pages/agreement/Agreement";
-import { Refund } from "./pages/refund/Refund";
 
 export const AppRoutes = ({ getAuthCode, onAuth }) => {
     return (
@@ -25,7 +21,6 @@ export const AppRoutes = ({ getAuthCode, onAuth }) => {
             <Route path="/payment" element={<Payment />} />
             <Route path="/guarantee" element={<Guarantee />} />
             <Route path="/help" element={<Help />} />
-            <Route path="/contacts" element={<Contacts />} />
             <Route path="/profile/:tab?" element={<Profile />} />
             <Route path="/item/:id" element={<ItemCard onAuth={onAuth} />} />
             <Route path="/catalogue/:category?/:popular?/:brand?/:brandset?" element={<Catalogue />} />
@@ -34,9 +29,6 @@ export const AppRoutes = ({ getAuthCode, onAuth }) => {
             <Route path="/order/:item_uid?/:size?/:ship?" element={<Order />} />
             <Route path="/oops" element={<Oops />} />
             <Route path="/thanks" element={<Thanks />} />
-            <Route path="/privacy-policy" element={<Policy />} />
-            <Route path="/user-agreement" element={<Agreement />} />
-            <Route path="/payment-and-refund" element={<Refund />} />
             <Route path="*" element={<Error />} />
         </Routes>
     )

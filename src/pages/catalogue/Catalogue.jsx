@@ -7,7 +7,6 @@ import { v4 } from 'uuid'
 import { observer } from "mobx-react-lite"
 import { Context } from "../.."
 import { SizeFilter } from "../../components/filters/sizeFilter/SizeFilter"
-import { SizeGridFilter } from "../../components/filters/sizeGridFilter/SizeGridFilter"
 import { PriceFilter } from "../../components/filters/priceFilter/PriceFilter"
 import { fetchMinMaxPrice } from "../../http/sizeAPI"
 import { BrandFilter } from "../../components/filters/brandFilter/BrandFilter";
@@ -21,16 +20,6 @@ import sortImg from '../../assets/sort.svg'
 import filterImg from '../../assets/filter.svg'
 import { SortMobile } from "../../components/sortMobile/SortMobile";
 import { FilterMobile } from "../../components/filterMobile/FilterMobile";
-
-
-// const sortOptions = [
-//     { name: 'По умолчанию', value: 'default' },
-//     { name: 'Популярные', value: 'popular' },
-//     { name: 'По возрастанию цены', value: 'priceUp' },
-//     { name: 'По убыванию цены', value: 'priceDown' },
-//     { name: 'Сначала новые товары', value: 'new' },
-//     { name: 'Сначала старые товары', value: 'old' },
-// ]
 
 const sortOptions = [
     { name: 'Популярные', value: 'popular' },
@@ -134,10 +123,6 @@ export const Catalogue = observer(() => {
 
     const handleSelectPage = (page) => {
         items.setPage(page)
-        // window.scrollTo({
-        //     top: 0,
-        //     behavior: 'smooth'
-        // })
     }
 
     const handleSelectSort = (sort) => {
@@ -185,7 +170,6 @@ export const Catalogue = observer(() => {
         const uid = v4()
         fetchId.current = uid
         await fetchItems(category, brand_check.brand ? [...[brand_check.brand], ...checkedBrands] : checkedBrands, checkedModels, checkedSizes, grid, checkedPrices, sort.value, items.limit, firstPage ? 1 : items.page, search && search)
-            // await fetchItems(category, brand_check.brand ? [...[brand_check.brand], ...checkedBrands] : checkedBrands, brand_check.model ? [...[brand_check.model], ...checkedModels] : checkedModels, checkedSizes, grid, checkedPrices, sort.value, items.limit, firstPage ? 1 : items.page)
             .then(data => {
                 if (uid === fetchId.current) {
                     items.setItems(data.items)
@@ -318,9 +302,6 @@ export const Catalogue = observer(() => {
                     {width > 850 &&
                         <>
                             <PriceFilter category={category} min={prices.min} max={prices.max} onSelectPrice={handleSelectPrice} subtitle />
-                            {category !== 'cosmetics' && category !== 'perfumery' &&
-                                <SizeGridFilter onSelectGrid={handleSelectGrid} brands={checkedBrands} subtitle category={category} />
-                            }
                             {category === 'shoes' &&
                                 <BrandFilter category={category} onSelectBrand={handleSelectBrand} onSelectModel={handleSelectModel} brandLink={brand_check.brand} modelLink={brand_check.model} subtitle />
                             }

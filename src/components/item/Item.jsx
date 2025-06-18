@@ -86,18 +86,6 @@ export const Item = observer(({ item, globalCatalogue, sizes, checkedSizes }) =>
         }
     }
 
-    // const findSize = () => {
-    //     let minimal = 1000000000
-    //     if (checkedSizes && sizes) {
-    //         const found = sizes.filter(i => i.item_uid === item.item_uid)
-    //         for (let i of found) {
-    //             if (i.price < minimal) minimal = i.price
-    //         }
-    //     }
-    //     if (minimal === 1000000000) minimal = item.min_price
-    //     return minimal
-    // }
-
     useEffect(() => {
         checkUserId()
         // eslint-disable-next-line

@@ -90,8 +90,6 @@ export const SizeFilter = ({ brand, sizeGrid, category, onSelectSize, subtitle, 
             setCheckedSizes(preset)
     }, [preset])
 
-    if (category === 'cosmetics' || category === 'perfumery') return null
-
     if (brand && (!brands || brands.length === 0)) return (
         <>
             <div className="LoaderBox4">

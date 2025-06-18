@@ -24,7 +24,6 @@ export const Profile = () => {
         navigate(e.target.id)
         window.scrollTo({
             top: 0,
-            // behavior: 'smooth'
         })
     }
 

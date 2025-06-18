@@ -5,7 +5,6 @@ import './Payment.scss'
 import sber from './imgs/sber.png'
 import tink from './imgs/tink.png'
 import sbp from './imgs/sbp.png'
-import mock from './imgs/mock.png'
 import point from './imgs/point.svg'
 import point2 from './imgs/point2.svg'
 
@@ -16,7 +15,6 @@ export const Payment = () => {
         navigate(e.target.id)
         window.scrollTo({
             top: 0,
-            // behavior: 'smooth'
         })
     }
 
@@ -63,9 +61,6 @@ export const Payment = () => {
                         <h4>Как воспользоваться сплитом?</h4>
                         <p className="MB0">Активировать оплату "сплитом" вы сможете на странице оформления заказа при выборе способа оплаты.</p>
                         <p>У вас будет 2 варианта на выбор - оплатить полностью и сплит-платёж.</p>
-                    </div>
-                    <div className="SplitDescImg">
-                        <img src={mock} alt="Оплата" />
                     </div>
                 </div>
             </div>

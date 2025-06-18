@@ -1,10 +1,5 @@
 import { $host } from '.'
 
-// export const fetchSizes = async (size_type, item_category) => {
-//     const { data } = await $host.get('api/size', { params: { size_type, item_category } })
-//     return data
-// }
-
 export const fetchSizes = async (brand, size_type, item_category) => {
     const { data } = await $host.get('api/size', { params: { brand, size_type, item_category } })
     return data

@@ -314,11 +314,7 @@ export const ItemCard = observer(({ onAuth }) => {
     const handleAuth = async () => {
         await createAuth().then(data => {
             let telegramUrl
-            if (window.location.hostname === 'localhost') {
-                telegramUrl = process.env.REACT_APP_LOCAL_BOT_URL + data.code
-            } else {
-                telegramUrl = process.env.REACT_APP_BOT_URL + data.code
-            }
+            telegramUrl = process.env.REACT_APP_BOT_URL + data.code
 
             setTimeout(() => {
                 let newWindow = window.open(telegramUrl, '_blank')
@@ -462,7 +458,7 @@ export const ItemCard = observer(({ onAuth }) => {
                                         <span>Оригинал</span>
                                         <img src={checkmark} alt="" />
                                     </div>
-                                    <a className="ICDOriginalQuestion" href="https://kicksie.ru/guarantee" target="_blank" rel="noreferrer"><AiOutlineQuestionCircle size={20} pointerEvents="none" /></a>
+                                    <div className="ICDOriginalQuestion" id="/guarantee" onClick={handleNavigate}><AiOutlineQuestionCircle size={20} pointerEvents="none" /></div>
                                 </div>
                                 <div className="ICDSizes">
                                     <div className="ICDSizesSub">Доступные размеры:</div>
@@ -551,7 +547,7 @@ export const ItemCard = observer(({ onAuth }) => {
                                         Если у вас есть какие-либо вопросы или вам нужна помощь в выборе размера или модели,
                                         напишите нам в Telegram. Мы будем рады помочь вам!
                                     </div>
-                                    <a className="ICDTgBtn" href="https://t.me/kicksie_manager" target="_blank" rel="noreferrer">Написать в телеграм</a>
+                                    <a className="ICDTgBtn" href="https://t.me/nutsea" target="_blank" rel="noreferrer">Написать в телеграм</a>
                                     <div className="ItemCardLine" />
                                 </div>
                             </div>

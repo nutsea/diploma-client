@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import './FilterMobile.scss'
 
 import { PriceMobile } from "./priceMobile/PriceMobile";
-import { SizeGridMobile } from "./sizeGridMobile/SizeGridMobile";
 import { SizeMobile } from "./sizeMobile/SizeMobile";
 import { BrandMobile } from "./brandMobile/BrandMobile";
 
@@ -57,18 +56,6 @@ export const FilterMobile = ({ min, max, sizeGrid, category, onSelectPrice, onSe
     const handleDropPrice = () => {
         setPricePreset()
         onSelectPrice()
-    }
-
-    const handleSelectGrid = (grid) => {
-        setGridPreset(grid)
-        onSelectGrid(grid)
-        setSizePreset()
-    }
-
-    const handleDropGrid = () => {
-        setGridPreset()
-        onSelectGrid('EU')
-        setSizePreset()
     }
 
     const handleSelectSize = (size) => {
@@ -137,7 +124,6 @@ export const FilterMobile = ({ min, max, sizeGrid, category, onSelectPrice, onSe
         if (modelsPreset && modelsPreset.length > 0)
             count += modelsPreset.length
         return count > 0 ? `${count}` : ''
-        // else return ''
     }
 
     useEffect(() => {
@@ -227,16 +213,6 @@ export const FilterMobile = ({ min, max, sizeGrid, category, onSelectPrice, onSe
                             onSelectPrice={handleSelectPrice}
                             preset={pricePreset}
                             onDrop={handleDropPrice}
-                        />
-                    }
-                    {selectedFilter === 'sizeGrid' &&
-                        <SizeGridMobile
-                            onClose={handleUnselectFilter}
-                            onSelectGrid={handleSelectGrid}
-                            preset={gridPreset}
-                            onDrop={handleDropGrid}
-                            category={category}
-                            brands={brands}
                         />
                     }
                     {selectedFilter === 'brand' &&

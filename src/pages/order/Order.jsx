@@ -544,56 +544,6 @@ export const Order = observer(() => {
                 items: newFastClothes
             }
             await sendCommonOrder(slowOrderShoes, slowOrderClothes, fastOrderShoes, fastOrderClothes, user.name, user.link, actualCost, `${surname} ${name} ${patronymic}`, sendNumber, address, delivery, payment === 'split', constants.course, constants.fee, promo, discount)
-            // if (newSlowItems.length > 0) {
-            //     await sendOrder(
-            //         user.name, // имя
-            //         user.link, // никнейм
-            //         actualCost, // проверена ли цена
-            //         `${surname} ${name} ${patronymic}`, // фио
-            //         sendNumber, // телефон
-            //         address, // адрес
-            //         delivery, // курьер или пвз
-            //         constants.standartShip, // стоимость доставки
-            //         payment === 'split', // сплит или нет
-            //         constants.course, // курс
-            //         constants.fee, // комиссия
-            //         FormatPrice.roundPrice(FormatPrice.formatSlowArray(cart, constants.course, constants.standartShip, constants.fee, constants.categoriesShips).shipSum), // сумма заказа
-            //         discount ?
-            //             (newFastItems.length > 0 ?
-            //                 FormatPrice.roundPrice(Math.ceil(FormatPrice.formatSlowArray(cart, constants.course, constants.standartShip, constants.fee, constants.categoriesShips).shipSum - (discount / 2))) :
-            //                 FormatPrice.roundPrice(Math.ceil(FormatPrice.formatSlowArray(cart, constants.course, constants.standartShip, constants.fee, constants.categoriesShips).shipSum - discount))
-            //             ) :
-            //             FormatPrice.roundPrice(FormatPrice.formatSlowArray(cart, constants.course, constants.standartShip, constants.fee, constants.categoriesShips).shipSum), // сумма заказа со скидкой
-            //         newFastItems.length > 0 ? Math.ceil(discount / 2) : discount, // скидка
-            //         promo, // промокод
-            //         newSlowItems // товары
-            //     )
-            // }
-            // if (newFastItems.length > 0) {
-            //     await sendOrder(
-            //         user.name, // имя
-            //         user.link, // никнейм
-            //         actualCost, // проверена ли цена
-            //         `${surname} ${name} ${patronymic}`, // фио
-            //         sendNumber, // телефон
-            //         address, // адрес
-            //         delivery, // курьер или пвз
-            //         constants.expressShip, // стоимость доставки
-            //         payment === 'split', // сплит или нет
-            //         constants.course, // курс
-            //         constants.fee, // комиссия
-            //         FormatPrice.roundPrice(FormatPrice.formatFastArray(cart, constants.course, constants.expressShip, constants.fee, constants.categoriesShips).shipSum), // сумма заказа
-            //         discount ?
-            //             (newSlowItems.length > 0 ?
-            //                 FormatPrice.roundPrice(Math.ceil(FormatPrice.formatFastArray(cart, constants.course, constants.expressShip, constants.fee, constants.categoriesShips).shipSum - (discount / 2))) :
-            //                 Math.ceil(FormatPrice.formatFastArray(cart, constants.course, constants.expressShip, constants.fee, constants.categoriesShips).shipSum - discount)
-            //             ) :
-            //             FormatPrice.roundPrice(FormatPrice.formatFastArray(cart, constants.course, constants.expressShip, constants.fee, constants.categoriesShips).shipSum), // сумма заказа со скидкой
-            //         newSlowItems.length > 0 ? Math.ceil(discount / 2) : discount, // скидка
-            //         promo, // промокод
-            //         newFastItems // товары
-            //     )
-            // }
             await clearUserCart()
             navigate(`/thanks`)
             window.scrollTo({

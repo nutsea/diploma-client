@@ -224,11 +224,7 @@ export const Cart = observer(({ onAuth }) => {
     const handleAuth = async () => {
         await createAuth().then(data => {
             let telegramUrl
-            if (window.location.hostname === 'localhost') {
-                telegramUrl = process.env.REACT_APP_LOCAL_BOT_URL + data.code
-            } else {
-                telegramUrl = process.env.REACT_APP_BOT_URL + data.code
-            }
+            telegramUrl = process.env.REACT_APP_BOT_URL + data.code
 
             setTimeout(() => {
                 let newWindow = window.open(telegramUrl, '_blank')

@@ -190,7 +190,7 @@ export const ProfileOrders = ({ user }) => {
                                             <div className="POTrack">{order.sdek_track}</div>
                                         </>
                                     }
-                                    <a className="POContactBtn" href="https://t.me/kicksie_manager" target="_blank" rel="noreferrer">Связаться с нами</a>
+                                    <a className="POContactBtn" href="https://t.me/nutsea" target="_blank" rel="noreferrer">Связаться с нами</a>
                                 </div>
                                 <div className="POReport">
                                     <div className="POReportSub">Отчет о выкупе</div>

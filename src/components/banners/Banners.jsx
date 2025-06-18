@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
 import "./Banners.scss"
 
-import banner1 from "./images/banner1.jpg"
 import banner2 from "./images/banner2.jpg"
 import banner3 from "./images/banner3.jpg"
 import banner4 from "./images/banner4.jpg"
-import banner_m1 from "./images/banner_m1.jpg"
 import banner_m2 from "./images/banner_m2.jpg"
 import banner_m3 from "./images/banner_m3.jpg"
 import banner_m4 from "./images/banner_m4.jpg"
@@ -64,14 +62,6 @@ export const Banners = () => {
                 <span className={`${banner === 3 ? 'BannerSelect' : ''}`}></span>
             </div>
             <div className="BannerBox">
-                <img className="Banner" src={banner1} alt="Баннер" />
-                <img className="Banner2" src={banner_m1} alt="Баннер" />
-                <div className="BannerBtns">
-                    <div className="BanLeft" onClick={bannerLeft}><img src={arr} alt="Назад" /></div>
-                    <div className="BanRight" onClick={bannerRight}><img src={arr} alt="Назад" /></div>
-                </div>
-            </div>
-            <div className="BannerBox BanNone">
                 <img className="Banner" src={banner2} alt="Баннер" />
                 <img className="Banner2" src={banner_m2} alt="Баннер" />
                 <div className="BannerBtns">

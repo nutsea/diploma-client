@@ -27,8 +27,7 @@
 }
 
 .HeaderLogo {
-    width: 104px;
-    margin-bottom: 8px;
+    width: 154px;
     cursor: pointer;
 }
 
@@ -39,7 +38,6 @@
     font-family: 'Manrope', sans-serif;
     font-weight: 600;
     font-size: 14px;
-    margin-top: 4px;
 
     span {
         cursor: pointer;
@@ -95,7 +93,6 @@
         font-family: 'Manrope', sans-serif;
         font-weight: 600;
         font-size: 14px;
-        // width: calc(100% - 14px - 13px - 13px);
         padding: 0;
         width: 100%;
         color: #020202;
@@ -328,7 +325,6 @@
     .HeaderLogo {
         width: auto;
         height: 18px;
-        margin-bottom: 3px;
     }
 
     .FavHeaderBox {
@@ -436,12 +432,19 @@
     }
 }
 
+@media (max-width: 560px) {
+    .HeaderLogo {
+        height: 16px;
+    }
+}
+
 @media (max-width: 360px) {
     .BurgerBtn {
         width: fit-content;
     }
 
     .HeaderLogo {
-        margin-right: calc(50% - 96px - 54px);
+        margin-right: calc(52% - 96px - 54px);
+        height: 14px;
     }
 }

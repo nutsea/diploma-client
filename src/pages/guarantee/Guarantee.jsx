@@ -14,7 +14,6 @@ export const Guarantee = () => {
         navigate(e.target.id)
         window.scrollTo({
             top: 0,
-            // behavior: 'smooth'
         })
     }
 
@@ -28,7 +27,7 @@ export const Guarantee = () => {
             <div className="GuaranteeInfo">
                 <div className="GuaranteeTop MB42">
                     <div className="GuaranteeTopLeft">
-                        <h2>KICKSIE - гарантия оригинальности</h2>
+                        <h2>CLOSETRUN - гарантия оригинальности</h2>
                         <p>
                             Мы гарантируем оригинальность товаров, заказанных через наш сервис,
                             и сейчас расскажем, почему вы можете быть уверены в этом.
@@ -76,13 +75,6 @@ export const Guarantee = () => {
                 </div>
                 <div className="GuaranteeMid MB42">
                     <div className="GuaranteeMidLeft Mobile42">
-                        <div className="GradientText2">
-                            <span className="GradientVerticalLine"></span>
-                            <p>
-                                Чтобы узнать больше о маркетплейсе Poizon,
-                                советуем прочитать статью <a href="https://vk.com/@kicksie-poizon" target="_blank" rel="noreferrer">подробней о Poizon</a> (осторожно, много интересного текста)!
-                            </p>
-                        </div>
                         <p>
                             Если продавец пытается отправить подделку, Poizon принимает строгие меры, навсегда блокируя возможность сотрудничества.
                         </p>
@@ -118,13 +110,6 @@ export const Guarantee = () => {
                             Все элементы, такие как отчёт о выкупе, сертификат, бирюзовые бирки или защитные пломбы-наклейки, являются важными и
                             гарантируют, что ваш заказ действительно поступил с Poizon и прошёл все необходимые проверки.
                         </p>
-                        <div className="GradientText2">
-                            <span className="GradientVerticalLine2"></span>
-                            <p>
-                                Более подробно о том, как проверить все элементы подтверждения аутентификации от Poizon,
-                                мы рассказываем в <a href="https://vk.com/@kicksie-proverka-tovara-s-poizon" target="_blank" rel="noreferrer">этой</a> статье.
-                            </p>
-                        </div>
                         <p>
                             Мы надеемся, что эта статья помогла вам лучше разобраться в процессе проверки товаров на оригинальность от Poizon.
                         </p>

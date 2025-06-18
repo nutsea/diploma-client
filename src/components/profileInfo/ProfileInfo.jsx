@@ -9,7 +9,6 @@ import profile from '../../assets/avatar.png'
 export const ProfileInfo = ({ user, nameProp, surnameProp, phoneProp, onSendUpdate }) => {
     const [name, setName] = useState('')
     const [surname, setSurname] = useState('')
-    // const [email, setEmail] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
     const [sendNumber, setSendNumber] = useState('')
 
